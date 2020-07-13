@@ -2,4 +2,4 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/DataStruAlgo/.vs/DataStruAlgo/v16/ipch/AutoPCH/8dafc05be1c89a93
+*.db
