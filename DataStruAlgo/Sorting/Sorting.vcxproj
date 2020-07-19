@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="C:\Users\mudid\Desktop\BubbleSort.cpp" />
+    <ClCompile Include="C:\Users\mudid\Desktop\main.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

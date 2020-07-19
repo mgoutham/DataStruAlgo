@@ -31,57 +31,29 @@ using namespace std;
 
 void selectionSort(int p[], int len)
 {
-	for (int i = 0; i < len; i++) // sorted sublist
+	for (int i = 0; i < len; i++)
 	{
-		int iMinIndx = -1;
+		int jMin = i;
 
-		for (int j = i; j < len; j++) // unsorted sublist
+		for (int j = i; j < len; j++) 
 		{
 			if (p[j] < p[i])
 			{
-				iMinIndx = j;
+				jMin = j;
 			}
 		}
 
-		if (-1 != iMinIndx)
+		if (i != jMin)
 		{
 			//swap
 			int tmp = 0;
 			tmp = p[i];
-			p[i] = p[iMinIndx];
-			p[iMinIndx] = tmp;
+			p[i] = p[jMin];
+			p[jMin] = tmp;
 		}
 
 		cout << "\nAfter " << i + 1 << "th iteration\n";
 		for (int i = 0; i < len; i++)
 			cout << p[i] << "\t";
 	}
-}
-
-
-int main()
-{
-
-	int array1[10] = { 10,30,40,20,50,90,100,80,70,60 };
-	int len = 0;
-
-	//size of array
-	len = sizeof(array1) / sizeof(array1[0]);
-	//cout << len << endl;
-
-	cout << "Before Sorting\n";
-	for (auto d : array1)
-	{
-		cout << d << "\t";
-	}
-
-	selectionSort(array1, len);
-
-	cout << "\nAfter Sorting\n";
-	for (auto d : array1)
-	{	
-		cout << d << "\t";
-	}
-
-	return 0;
 }
