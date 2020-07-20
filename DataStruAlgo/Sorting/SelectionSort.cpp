@@ -33,23 +33,23 @@ void selectionSort(int p[], int len)
 {
 	for (int i = 0; i < len; i++)
 	{
-		int jMin = i;
+		int iMin = i;
 
 		for (int j = i; j < len; j++) 
 		{
 			if (p[j] < p[i])
 			{
-				jMin = j;
+				iMin = j;
 			}
 		}
 
-		if (i != jMin)
+		if (i != iMin)
 		{
 			//swap
 			int tmp = 0;
 			tmp = p[i];
-			p[i] = p[jMin];
-			p[jMin] = tmp;
+			p[i] = p[iMin];
+			p[iMin] = tmp;
 		}
 
 		cout << "\nAfter " << i + 1 << "th iteration\n";

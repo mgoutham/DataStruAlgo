@@ -34,5 +34,10 @@ void bubblesort(int p[], int len)
 				p[j] = tmp;
 			}
 		}
+
+		std::cout << "\nAfter " << i + 1 << "th iteration\n";
+		for (int i = 0; i < len; i++)
+			std::cout << p[i] << "\t";
+
 	}
 }
