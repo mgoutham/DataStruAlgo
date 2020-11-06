@@ -17,11 +17,16 @@ struct Tree {
 		if (size != 0)
 		{
 			treeSize = size;
-			child = (Tree**)malloc(size * sizeof(Tree));
+			//child = (Tree**)malloc(size * sizeof(Tree*));
+
+			child = new Tree*[size];
+
+
 
 			while (--size >= 0)
 			{
-				child[size] = (Tree*)malloc(sizeof(Tree));
+				//child[size] = (Tree*)malloc(sizeof(Tree));
+				child[size] = new Tree;
 			}
 
 		}
@@ -34,6 +39,11 @@ struct Tree {
 
 	~Tree() {
 
+		int size = treeSize;
+		while (--size >= 0)
+		{
+			delete[] child[size];
+		}
 		delete[] child;
 	}
 
@@ -54,7 +64,6 @@ void printTree(Tree* t)
 		cout << q.front()->data << ":";
 
 		int size = q.front()->treeSize;
-		int size1 = sizeof(q.front()->child) / sizeof(q.front()->child[0]);
 
 		if (size != 0)
 		{
@@ -87,7 +96,7 @@ int main()
 	//5:
 	//6:
 
-	Tree t = 1;
+	//Tree* t = new Tree[10];
 
 	Tree* c6 = new Tree();
 	c6->data = 6;
