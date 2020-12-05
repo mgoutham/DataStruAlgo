@@ -37,7 +37,7 @@ void selectionSort(int p[], int len)
 
 		for (int j = i; j < len; j++) 
 		{
-			if (p[j] < p[i])
+			if (p[j] < p[iMin])
 			{
 				iMin = j;
 			}
