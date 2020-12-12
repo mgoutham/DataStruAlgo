@@ -87,51 +87,51 @@ void printTree(Tree* t)
 
 
 
-int main()
-{
-	//1:2,3,4
-	//2:5
-	//3:
-	//4:6
-	//5:
-	//6:
+//int main()
+//{
+//	//1:2,3,4
+//	//2:5
+//	//3:
+//	//4:6
+//	//5:
+//	//6:
 
-	//Tree* t = new Tree[10];
+//	//Tree* t = new Tree[10];
 
-	Tree* c6 = new Tree();
-	c6->data = 6;
+//	Tree* c6 = new Tree();
+//	c6->data = 6;
 
-	Tree* c5 = new Tree();
-	c5->data = 5;
+//	Tree* c5 = new Tree();
+//	c5->data = 5;
 
-	Tree* c4 = new Tree(1);
-	c4->data = 4;
-	c4->child[0] = c6;
+//	Tree* c4 = new Tree(1);
+//	c4->data = 4;
+//	c4->child[0] = c6;
 
-	Tree* c3 = new Tree();
-	c3->data = 3;
+//	Tree* c3 = new Tree();
+//	c3->data = 3;
 
-	Tree* c2 = new Tree(1);
-	c2->data = 2;
-	c2->child[0] = c5;
+//	Tree* c2 = new Tree(1);
+//	c2->data = 2;
+//	c2->child[0] = c5;
 
-	Tree* c1 = new Tree(3);
-	c1->data = 1;
-	c1->child[0] = c2;
-	c1->child[1] = c3;
-	c1->child[2] = c4;
+//	Tree* c1 = new Tree(3);
+//	c1->data = 1;
+//	c1->child[0] = c2;
+//	c1->child[1] = c3;
+//	c1->child[2] = c4;
 
-	//Tree* root = c1;
+//	//Tree* root = c1;
 
-	printTree(c1);
+//    printTree(c1);
 
-	delete c1;
-	delete c2;
-	delete c3;
-	delete c4;
-	delete c5;
-	delete c6;
+//	delete c1;
+//	delete c2;
+//	delete c3;
+//	delete c4;
+//	delete c5;
+//	delete c6;
 
-	return 0;
+//	return 0;
 
-}
+//}
